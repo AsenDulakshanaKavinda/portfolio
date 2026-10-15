@@ -1,0 +1,41 @@
+/* Base Desktop Styles */
+.hero-endnote-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.endnote-breadcrumb {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+.endnote-scroll {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+/* --- Mobile Styles (Screens under 768px) --- */
+@media (max-width: 768px) {
+    .hero-endnote-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+        gap: 12px;
+    }
+
+    .endnote-breadcrumb,
+    .endnote-scroll {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+}

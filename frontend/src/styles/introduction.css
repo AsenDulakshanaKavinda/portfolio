@@ -1,0 +1,103 @@
+/* Container Layout (Desktop First) */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Left Content Block */
+.main-headline {
+    flex: 1 1 60%;
+}
+
+.intro-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.name-title {
+    font-family: 'Playfair Display', Didot, Georgia, serif;
+    font-size: 72px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    color: #111;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.main-subheading {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+    font-family: sans-serif;
+}
+
+/* Right Content Block */
+.side-description {
+    flex: 0 0 320px;
+    padding-bottom: 4px;
+}
+
+.section-tag {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.description-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* --- Mobile Responsiveness (Under 768px) --- */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 24px;
+        gap: 36px;
+    }
+
+    .main-headline {
+        width: 100%;
+    }
+
+    /* Font scales down on mobile and wraps nicely */
+    .name-title {
+        font-size: 52px;
+        line-height: 1.05;
+        margin-bottom: 16px;
+    }
+
+    .main-subheading {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .side-description {
+        width: 100%;
+        flex: auto;
+    }
+
+    .description-text {
+        font-size: 13px;
+    }
+}

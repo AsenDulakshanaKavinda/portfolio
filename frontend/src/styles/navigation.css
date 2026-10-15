@@ -1,0 +1,83 @@
+/* Base Desktop Styles */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px; /* Reduced vertical padding */
+    border-bottom: 1px solid #eaeaea;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.monogram-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav-list li {
+    cursor: pointer;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/* Mobile Responsiveness (Screens under 768px) */
+@media (max-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 16px 20px;
+        row-gap: 24px;
+    }
+
+    /* Force Logo to take left side of row 1 */
+    .monogram-container {
+        order: 1;
+        flex: 1 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    /* Force ILLUSTRATIVE PORTFOLIO to take right side of row 1 */
+    .section-label {
+        order: 2;
+        flex: 1 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    /* Force Nav to take full width on row 2 */
+    .nav-container {
+        order: 3;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .nav-list {
+        width: 100%;
+        justify-content: space-between; /* Spreads out links across the row */
+        gap: 8px;
+        font-size: 13px;
+    }
+}

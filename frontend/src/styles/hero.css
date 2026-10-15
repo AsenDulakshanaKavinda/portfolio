@@ -1,0 +1,35 @@
+/* Base Desktop Container */
+.hero-section {
+    height: 100vh; /* Fixed height to match screen exactly */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow: hidden; /* Prevents micro-scrollbars */
+}
+
+/* Middle Container holding Introduction & VisualIntroduction */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    min-height: 0; /* Important: Allows child flex items to shrink when needed */
+    padding: 8px 0;
+}
+
+/* --- Mobile View (Allows normal scroll on mobile screens) --- */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .hero-content {
+        gap: 20px;
+        padding: 16px 0;
+    }
+}

@@ -1,0 +1,126 @@
+/* Base Desktop Styles */
+.visual-intro-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 8px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Left Section: Information & Links */
+.visual-intro-info {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.visual-intro-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0 0 40px 0;
+    max-width: 240px;
+}
+
+/* Links Container & Underline Styles */
+.action-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-row {
+    display: flex;
+    gap: 16px;
+}
+
+.action-link {
+    font-size: 13px;
+    color: #222222;
+    text-decoration: none;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 4px;
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+.action-link:hover {
+    opacity: 0.6;
+}
+
+/* Right Section: Banner Graphic */
+.visual-intro-graphic {
+    flex: 1;
+    min-width: 0;
+}
+
+.visual-banner-container {
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 32px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+.banner-image {
+    max-height: 220px; /* Constrain image height slightly on small screens */
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+.banner-caption {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #888888;
+    margin-top: 16px;
+    display: block;
+    text-transform: uppercase;
+}
+
+/* --- Mobile Styles (Screens under 768px) --- */
+@media (max-width: 768px) {
+    .visual-intro-container {
+        flex-direction: column;
+        padding: 16px 20px 40px 20px;
+        gap: 24px;
+    }
+
+    /* Move graphic to the top on mobile */
+    .visual-intro-graphic {
+        order: 1;
+        width: 100%;
+    }
+
+    /* Move text and links below graphic on mobile */
+    .visual-intro-info {
+        order: 2;
+        width: 100%;
+        flex: none;
+    }
+
+    .visual-intro-text {
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .visual-banner-container {
+        padding: 16px;
+    }
+}
